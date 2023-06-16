@@ -1,7 +1,7 @@
 using SistemaVenta.IOC;
 
 var builder = WebApplication.CreateBuilder(args);
-//prueba git
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
