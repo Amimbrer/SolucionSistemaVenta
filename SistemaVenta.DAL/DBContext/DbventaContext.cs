@@ -5,13 +5,10 @@ using SistemaVenta.Entity;
 
 namespace SistemaVenta.DAL.DBContext;
 
-public partial class DbventaContext : DbContext
+public partial class DBVENTAContext : DbContext
 {
-    public DbventaContext()
-    {
-    }
 
-    public DbventaContext(DbContextOptions<DbventaContext> options)
+    public DBVENTAContext(DbContextOptions<DbventaContext> options)
         : base(options)
     {
     }
