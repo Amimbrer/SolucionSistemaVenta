@@ -4,9 +4,8 @@ using SistemaVenta.DAL.DBContext;
 using Microsoft.EntityFrameworkCore;
 using SistemaVenta.DAL.Implementacion;
 using SistemaVenta.DAL.Interfaces;
-//using SistemaVenta.DAL.Interfaces;
-//using SistemaVenta.BLL.Implementacion;
-//using SistemaVenta.BLL.Interfaces;
+using SistemaVenta.BLL.Implementacion;
+using SistemaVenta.BLL.Interfaces;
 namespace SistemaVenta.IOC
 {
     public static class Dependencia
@@ -22,6 +21,11 @@ namespace SistemaVenta.IOC
 
             services.AddTransient(typeof (IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IVentaRepository, VentaRepository>();
+
+
+
+            //Dependencia para envio de correo
+            services.AddScoped<ICorreoService, CorreoService>();
         }
     }
 }
