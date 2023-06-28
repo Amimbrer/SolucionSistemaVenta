@@ -8,7 +8,7 @@ namespace SistemaVenta.DAL.DBContext;
 public partial class DBVENTAContext : DbContext
 {
 
-    public DBVENTAContext(DbContextOptions<DbventaContext> options)
+    public DBVENTAContext(DbContextOptions<DBVENTAContext> options)
         : base(options)
     {
     }
