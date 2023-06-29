@@ -29,6 +29,13 @@ namespace SistemaVenta.IOC
 
             // Dependencia para el servicio de FireBase
             services.AddScoped<IFirebaseService, FireBaseService>();
+
+            // Dependencia para encriptado de utilidades
+            services.AddScoped<IUtilidadesService, UtilidadesService>();
+
+            // Dependencia para los roles
+            services.AddScoped<IRolService, RolService>();
+
         }
     }
 }
