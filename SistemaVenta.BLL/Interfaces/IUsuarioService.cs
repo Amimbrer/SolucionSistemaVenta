@@ -1,4 +1,5 @@
-﻿using SistemaVenta.Entity;
+﻿using SistemaVenta.DAL.Interfaces;
+using SistemaVenta.Entity;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +11,10 @@ namespace SistemaVenta.BLL.Interfaces
 {
     public interface IUsuarioService
     {
-        Task<List<Usuario>> Lista();
+               Task<List<Usuario>> Lista();
+
+
+
         Task<Usuario> Crear(Usuario entidad, Stream Foto = null, string NombreFoto = "", string UrlPlantillaCorreo = "");
 
         Task<Usuario> Editar(Usuario entidad, Stream Foto = null, string NombreFoto = "");
