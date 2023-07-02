@@ -11,5 +11,6 @@ namespace SistemaVenta.BLL.Interfaces
         string GenerarClave(string texto);
 
         string ConvertirSha256(string texto);
+        string GenerarClave();
     }
 }
